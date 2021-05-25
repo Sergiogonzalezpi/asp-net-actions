@@ -21,7 +21,7 @@ jobs:
       uses: NuGet/setup-nuget@v1.0.5
     
     - name: Restore nuget package
-      run: nuget restore ASP-NET-ACTIONS.sln
+      run: nuget restore ASP-NET-ACTIONS.MVC.sln
       
     - name: Buil solution
-      run: msbuild ASP-NET-ACTIONS.sln
+      run: msbuild ASP-NET-ACTIONS.MVC.sln
