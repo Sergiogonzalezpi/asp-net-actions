@@ -24,4 +24,4 @@ jobs:
       run: nuget restore ASP-NET-ACTIONS.sln
       
     - name: Buil solution
-      run: msbuild ASP-NET-ACTIONS.MVC.sln
+      run: msbuild ASP-NET-ACTIONS.sln
