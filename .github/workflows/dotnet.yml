@@ -17,7 +17,7 @@ jobs:
     - name: '[+] Setup ASP.NET CORE repository ....'
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: .NET Framework 4.7.2
+        dotnet-version: 4.7.2
     - name: '[+] Install ASP.NET CORE dependencies ....'
       run: dotnet restore
     - name: '[+] Build ASP.NET CORE repository ....'
