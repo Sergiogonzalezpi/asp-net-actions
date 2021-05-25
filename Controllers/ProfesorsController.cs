@@ -27,7 +27,7 @@ namespace ASP_NET_ACTIONS.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Profesor profesor = db.Profesores.Find(id);
+            Profesor profesor = db.Alumno.Find(id);
             if (profesor == null)
             {
                 return HttpNotFound();
