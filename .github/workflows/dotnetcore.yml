@@ -25,3 +25,7 @@ jobs:
       
     - name: Buil solution
       run: msbuild ASP-NET-ACTIONS.sln
+    
+  ci:
+    runs-on: [windows-latest]
+    needs: build
