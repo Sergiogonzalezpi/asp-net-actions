@@ -25,3 +25,8 @@ jobs:
     - name: Buil solution
       run: msbuild ASP-NET-ACTIONS.sln
 
+  merge:
+    runs-on: [ubuntu-lastest]
+    steps:
+    - name: hello
+      run: 'echo hello'
