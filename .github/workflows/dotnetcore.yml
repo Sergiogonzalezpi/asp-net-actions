@@ -33,3 +33,7 @@ jobs:
     steps:
     - name: hello
       run: 'echo hello'
+    - name: Download a single artifact
+      uses: actions/download-artifact@v2
+      with:
+        name: my-artifact
