@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+    branches:
+    - develop
+
+jobs:
+  build:
+
+    runs-on: [windows-latest]
+
+    steps:
+    - uses: actions/checkout@v2
+  
+    - name: setup-msbuild
+      uses: microsoft/setup-msbuild@v1
+      
+    - name: Setup NuGet.exe for use with actions
+      uses: NuGet/setup-nuget@v1.0.5
+    
+    - name: Restore nuget package
+      run: nuget restore ASP-NET-ACTIONS.sln
+      
+    - name: Buil solution
+      run: msbuild ASP-NET-ACTIONS.sln
+
+  merge:
+    runs-on: [ubuntu-lastest]
+    steps:
+    - name: hello
+      run: 'echo hello'
