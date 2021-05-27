@@ -32,4 +32,4 @@ jobs:
     
     steps:
     - name: hello
-      run: 'cmd'
+      run: 'echo hello'
