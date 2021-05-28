@@ -41,4 +41,5 @@ jobs:
       run: nuget restore ASP-NET-ACTIONS.sln
       
     - name: Buil solution
-      run: dotnet test
+      run: mstest ASP-NET-ACTIONS.sln
+
