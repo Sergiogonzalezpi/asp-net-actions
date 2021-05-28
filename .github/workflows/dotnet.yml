@@ -27,19 +27,10 @@ jobs:
 
   test:
     runs-on: [windows-latest]
-
-    steps:
-    - uses: actions/checkout@v2
-  
-    - name: setup-msbuild
-      uses: microsoft/setup-msbuild@v1
-      
-    - name: Setup NuGet.exe for use with actions
-      uses: NuGet/setup-nuget@v1.0.5
+    needs: build
     
-    - name: Restore nuget package
-      run: nuget restore ASP-NET-ACTIONS.sln
+    steps:
       
     - name: Buil solution
-      run: mstest ASP-NET-ACTIONS.sln
+      run: msbuild ASP-NET-ACTIONS.sln
 
