@@ -31,10 +31,10 @@ jobs:
     name: Dotnet Side by Side testing sample
     steps:
       - uses: actions/checkout@v2
-      - name: Setup dotnet
-        uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: '4.7.x'
+      - name: .NET Core CLI
+  # You may pin to the exact commit or the version.
+  # uses: baruchiro/github-actions@cfa460ee18f07031ba85ff00d2184fabf03f9f1f
+        uses: baruchiro/github-actions@0.0.1
       - run: dotnet build ASP-NET-ACTIONS.sln
       - run: dotnet test ASP-NET-ACTIONS.sln
 
