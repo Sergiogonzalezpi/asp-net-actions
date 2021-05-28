@@ -21,11 +21,3 @@ jobs:
     
     - name: Restore nuget package
       run: nuget restore ASP-NET-ACTIONS.sln
-      
-    - name: Buil solution
-      run: msbuild ASP-NET-ACTIONS.sln
-    - name: Download artifact
-      uses: actions/download-artifact@v2.0.9
-      with:
-        name: webapp
-
